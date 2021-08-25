@@ -1,6 +1,3 @@
-.test {
-  color: green;
-  p {
-    color: blue;
-  }
-}
+@import "./reset";
+@import "./variable";
+@import "./layout";
