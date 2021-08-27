@@ -1,0 +1,38 @@
+@import "../../style/main.scss";
+
+.navbar-position {
+  display: fixed;
+}
+.navbar {
+  padding: 2rem 0;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  ul {
+    li {
+      font-size: 1 rem;
+      display: inline;
+      a {
+        padding: 2.4rem 1.25rem;
+      }
+    }
+    li:hover {
+      color: $clrHover;
+    }
+    .login {
+      padding: 0.625rem 1.25rem;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .login:hover {
+      background: $clrHover;
+      color: #fff;
+      text-shadow: none;
+    }
+  }
+  .logo {
+    h1 {
+      font-weight: bold;
+    }
+  }
+}

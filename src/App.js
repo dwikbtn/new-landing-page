@@ -1,10 +1,14 @@
+import style from "./app.module.scss";
+import Navbar from "./components/Navbar/Navbar";
 import "./style/main.scss";
 
 function App() {
   return (
-    <div className="test">
-      <p>test</p>
-    </div>
+    <>
+      <section className={style["hero-background"]}>
+        <Navbar />
+      </section>
+    </>
   );
 }
 
