@@ -1,4 +1,8 @@
 .hero-background {
   background-image: url(img/landing.jpeg);
   background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }

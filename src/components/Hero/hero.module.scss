@@ -1,0 +1,28 @@
+@import "../../style/main.scss";
+
+.hero-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  h1.hero-text {
+    color: $white;
+    font-weight: 900;
+    font-size: 48px;
+    letter-spacing: -2px;
+    line-height: 72px;
+    margin-bottom: 50px;
+  }
+}
+
+.cta-section {
+  .cta {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 30px;
+    background-color: $white;
+    border-radius: 23px;
+    padding: 8px 26px;
+  }
+}

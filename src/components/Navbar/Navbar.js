@@ -3,9 +3,9 @@ import style from "./Navbar.module.scss";
 
 export default function Navbar() {
   return (
-    <header className="container">
+    <header>
       <nav className={style["navbar-position"]}>
-        <div className={style.navbar}>
+        <div className={style.navbar + " container"}>
           <ul>
             <li>
               <a href="/">Home</a>
@@ -36,7 +36,7 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-        <hr />
+        <hr className="container" />
       </nav>
     </header>
   );

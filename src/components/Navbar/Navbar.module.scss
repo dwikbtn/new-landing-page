@@ -1,16 +1,23 @@
 @import "../../style/main.scss";
 
 .navbar-position {
-  display: fixed;
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  hr {
+    border-color: $white;
+  }
 }
 .navbar {
   padding: 2rem 0;
-  font-weight: 400;
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
   ul {
     li {
+      color: $white;
       font-size: 1 rem;
       display: inline;
       a {
