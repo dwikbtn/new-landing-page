@@ -12,11 +12,18 @@ import icon3 from "../../img/icon/icon-3.svg";
 import icon4 from "../../img/icon/icon-4.svg";
 
 export default function Explore() {
+  const animateStart = () => {
+    console.log("start");
+  };
   return (
     <article className="container">
       {/* article 1 */}
-      <div className={style["explore-wrapper"]}>
-        <div className={style["img-wrapper"]}>
+      <div className={style["explore-wrapper"]} onLoad={animateStart}>
+        <div
+          className={
+            style["img-wrapper"] + " animate__animated animate__fadeInLeft"
+          }
+        >
           <img src={img1} alt="explore 1" />
         </div>
         <div className={style["text-wrapper"]}>

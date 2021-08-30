@@ -1,6 +1,7 @@
 @import "../../style/main.scss";
 
 .navbar-position {
+  z-index: 99;
   position: fixed;
   width: 100%;
   left: 50%;
