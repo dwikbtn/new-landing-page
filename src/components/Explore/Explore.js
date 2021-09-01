@@ -1,4 +1,5 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
 import style from "./explore.module.scss";
 
 //img
@@ -12,16 +13,21 @@ import icon3 from "../../img/icon/icon-3.svg";
 import icon4 from "../../img/icon/icon-4.svg";
 
 export default function Explore() {
-  const animateStart = () => {
-    console.log("start");
-  };
+  const [ref, inView] = useInView();
+  const [ref2, inView2] = useInView();
+  const [ref3, inView3] = useInView();
+  const [ref4, inView4] = useInView();
+
   return (
-    <article className="container">
+    <article id="explore" className="container">
       {/* article 1 */}
-      <div className={style["explore-wrapper"]} onLoad={animateStart}>
+      <div className={style["explore-wrapper"]}>
         <div
+          ref={ref}
           className={
-            style["img-wrapper"] + " animate__animated animate__fadeInLeft"
+            inView
+              ? style["img-wrapper"] + " animate__animated animate__fadeInLeft"
+              : style["img-wrapper"]
           }
         >
           <img src={img1} alt="explore 1" />
@@ -55,13 +61,27 @@ export default function Explore() {
             Learn More
           </a>
         </div>
-        <div className={style["img-wrapper"]}>
+        <div
+          ref={ref2}
+          className={
+            inView2
+              ? style["img-wrapper"] + " animate__animated animate__fadeInRight"
+              : style["img-wrapper"]
+          }
+        >
           <img src={img2} alt="explore 2" />
         </div>
       </div>
       {/* article 3 */}
       <div className={style["explore-wrapper"]}>
-        <div className={style["img-wrapper"]}>
+        <div
+          ref={ref3}
+          className={
+            inView3
+              ? style["img-wrapper"] + " animate__animated animate__fadeInLeft"
+              : style["img-wrapper"]
+          }
+        >
           <img src={img3} alt="explore 3" />
         </div>
         <div className={style["text-wrapper"]}>
@@ -93,7 +113,14 @@ export default function Explore() {
             Learn More
           </a>
         </div>
-        <div className={style["img-wrapper"]}>
+        <div
+          ref={ref4}
+          className={
+            inView4
+              ? style["img-wrapper"] + " animate__animated animate__fadeInRight"
+              : style["img-wrapper"]
+          }
+        >
           <img src={img1} alt="explore 1" />
         </div>
       </div>
